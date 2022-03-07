@@ -10,6 +10,12 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(9))
+    }
+}
+
 publishing {
     publications {
         library(MavenPublication) {
