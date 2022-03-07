@@ -17,12 +17,13 @@ dependencies {
 
 publishing {
     publications {
-        maven(MavenPublication) {
-            groupId = 'pics.waifu'
-            artifactId = 'Waifus4J'
-            version = '1.0'
-
+        library(MavenPublication) {
             from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = uri("${buildDir}/publishing-repository")
         }
     }
 }
