@@ -32,7 +32,7 @@ allprojects {
 ```  
 ```groovy  
 dependencies {  
-    implementation 'com.github.Waifu-pics:Waifus4J:master-SNAPSHOT'  
+    implementation 'com.github.eme22:Waifus4J:0.1'  
 }  
 ```  
 ## Examples
