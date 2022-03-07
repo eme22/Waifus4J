@@ -6,6 +6,11 @@ plugins {
 group = 'pics.waifu'
 version = '0.1'
 
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_9.toString()
+    targetCompatibility = JavaVersion.VERSION_1_9.toString()
+}
+
 repositories {
     mavenCentral()
 }
@@ -27,6 +32,3 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
-targetCompatibility = '1.9'
-sourceCompatibility = '1.9'
