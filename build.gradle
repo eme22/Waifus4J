@@ -10,12 +10,6 @@ repositories {
     mavenCentral()
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(9))
-    }
-}
-
 publishing {
     publications {
         library(MavenPublication) {
@@ -33,3 +27,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+targetCompatibility = '1.9'
+sourceCompatibility = '1.9'
