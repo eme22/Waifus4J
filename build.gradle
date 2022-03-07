@@ -3,16 +3,11 @@ plugins {
     id 'maven-publish'
 }
 
-group 'pics.waifu'
-version '0.1'
+group = 'pics.waifu'
+version = '0.1'
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'org.json', name: 'json', version: '20200518'
 }
 
 publishing {
@@ -21,9 +16,14 @@ publishing {
             from components.java
         }
     }
-    repositories {
-        maven {
-            url = uri("${buildDir}/publishing-repository")
-        }
-    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation 'org.json:json:20211205'
+}
+
+test {
+    useJUnitPlatform()
 }
